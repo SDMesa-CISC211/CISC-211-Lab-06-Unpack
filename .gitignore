@@ -43,3 +43,6 @@
 *.DS_Store
 /Lab-06-unp-starter/firmware/Lab-06-unp-starter.X/build/
 /Lab-06-unp-starter/firmware/Lab-06-unp-starter.X/dist/
+Lab-06-unp-starter/firmware/Lab-06-unp-starter.X/nbproject/Makefile-genesis.properties
+Lab-06-unp-starter/firmware/Lab-06-unp-starter.X/nbproject/Makefile-local-sam_e51_cnano.mk
+Lab-06-unp-starter/firmware/Lab-06-unp-starter.X/nbproject/Makefile-sam_e51_cnano.mk
