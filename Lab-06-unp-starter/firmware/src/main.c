@@ -230,7 +230,7 @@ static int testResult(int testNum,
             "a_value pass/fail:  %s\r\n"
             "b_value pass/fail:  %s\r\n"
             "debug values     expected       actual\r\n"
-            "packed_value:..0x%08lx      (NA)\r\n"
+            "packed_value:..0x%08lx    (value sent to student's code to be unpacked)\r\n"
             "a_value:.......0x%08lx    0x%08lx\r\n"
             "b_value:.......0x%08lx    0x%08lx\r\n"
             "\r\n",
