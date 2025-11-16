@@ -230,7 +230,7 @@ static int testResult(int testNum,
             "a_value pass/fail:  %s\r\n"
             "b_value pass/fail:  %s\r\n"
             "debug values     expected       actual\r\n"
-            "packed_value:..0x%08lx      (NA)\r\n"
+            "packed_value:..0x%08lx    (value sent to student's code to be unpacked)\r\n"
             "a_value:.......0x%08lx    0x%08lx\r\n"
             "b_value:.......0x%08lx    0x%08lx\r\n"
             "\r\n",
@@ -351,12 +351,12 @@ int main ( void )
             snprintf((char*)uartTxBuffer, MAX_PRINT_LEN,
                     "========= %s: Lab 6 Unpack: ALL TESTS COMPLETE, Idle Cycle Number: %ld\r\n"
                     "Summary of tests: %ld of %ld tests passed\r\n"
-                    "Final score for test cases: %ld of %ld points\r\n"
+                    "%s: Final score for test cases: %ld of %ld points\r\n"
                     "FINI!!!!!\r\n"
                     "\r\n",
                     (char *) nameStrPtr, idleCount, 
                     totalPassCount, totalTests,
-                    pointsScored, numPointsMax); 
+                    (char *) nameStrPtr, pointsScored, numPointsMax); 
 
 
 #if USING_HW 
