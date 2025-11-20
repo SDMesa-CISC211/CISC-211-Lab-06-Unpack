@@ -2,8 +2,6 @@
 /* Tell the assembler to allow both 16b and 32b extended Thumb instructions */
 .syntax unified
 
-#include <xc.h>
-
 /* Tell the assembler that what follows is in data memory    */
 .data
 .align
@@ -61,15 +59,11 @@ asmFunc:
     push {r4-r11,LR}
  
 .if 0
-    /* profs test code. */
+    /* This is an example of how to easily temporarily remove code when
+     * you are debugging. The assembler will ignore anything between
+     * the ".if 0" and ".endif" directives */
     mov r0,r0
 .endif
-    
-    /** note to profs: asmFunc.s solution is in Canvas at:
-     *    Canvas Files->
-     *        Lab Files and Coding Examples->
-     *            Lab 5 Division
-     * Use it to test the C test code */
     
     /*** STUDENTS: Place your code BELOW this line!!! **************/
 
@@ -77,12 +71,12 @@ asmFunc:
     /*** STUDENTS: Place your code ABOVE this line!!! **************/
 
 done:    
-    /* restore the caller's registers, as required by the 
-     * ARM calling convention 
-     */
     mov r0,r0 /* these are do-nothing lines to deal with IDE mem display bug */
     mov r0,r0 /* this is a do-nothing line to deal with IDE mem display bug */
 
+    /* restore the caller's registers, as required by the 
+     * ARM calling convention 
+     */
 screen_shot:    pop {r4-r11,LR}
 
     mov pc, lr	 /* asmFunc return to caller */
